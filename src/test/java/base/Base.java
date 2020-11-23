@@ -1,6 +1,5 @@
 package base;
 
-import io.cucumber.java.After;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -12,6 +11,7 @@ public class Base {
     public Base(WebDriver driver) {
         this.driver = driver;
     }
+
 
     public WebDriver navigateTo() {
         WebDriverManager.chromedriver().setup();
@@ -29,9 +29,11 @@ public class Base {
         return driver;
     }
 
-    @After
+//    @After
     public void tearDown() {
+        driver.close();
         driver.quit();
+        driver = null;
         System.out.println("Working Driver was closed.");
     }
 }

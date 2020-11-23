@@ -31,7 +31,6 @@ public class SearchSteps {
     @Test
     public void appearsPageWithResultsOfSearch() {
         Assert.assertFalse(driver.findElement(By.xpath("//p[contains(text(), '404')]")).isDisplayed());
+
     }
-
-
 }

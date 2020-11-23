@@ -36,8 +36,9 @@ public class CartSteps {
     public void the_product_appears_on_cart() throws Throwable {
         homePage.cartAppears();
         homePage.itemAddedToCart();
-
-        //Assert.assertEquals(0, driver.findElements(By.xpath("//p[contains(text(), '404')]")).size());
     }
-
+//    @After
+//    public void closeB() throws Throwable{
+//        homePage.tearDown();
+//    }
 }

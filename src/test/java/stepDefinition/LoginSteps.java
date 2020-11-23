@@ -30,8 +30,6 @@ public class LoginSteps {
     @When("SIGN IN Button is pressed")
     public void sign_in_button_is_pressed() throws Throwable {
         homePage.clickOnLogInBtn();
-        // Write code here that turns the phrase above into concrete actions
-        //throw new io.cucumber.java.PendingException();
     }
 
     @Test
@@ -62,6 +60,7 @@ public class LoginSteps {
     @Then("The page with successful authentication appears")
     public void the_page_with_successful_authentication_appears() throws Throwable {
         Assert.assertFalse(driver.findElement(By.xpath("//p[contains(text(), '404')]")).isDisplayed());
+
     }
 
 }

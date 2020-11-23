@@ -39,5 +39,4 @@ public class DetailedSteps {
     public void the_page_with_details_of_product_appears() throws Throwable {
         Assert.assertEquals(expectedName, homePage.getReturnedItem());
     }
-
 }

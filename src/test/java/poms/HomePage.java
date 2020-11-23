@@ -40,6 +40,10 @@ public class HomePage extends Base {
         super(driver);
     }
 
+    public void closeBrowser() {
+        tearDown();
+    }
+
     public void search(String element) {
         WebElement clickOnSearchField = driver.findElement(searchField);
         WebElement typeElementsOnSearchField = driver.findElement(searchField);
@@ -73,7 +77,6 @@ public class HomePage extends Base {
         WebElement fillRegPwdField = driver.findElement(regPwdField);
         WebElement fillRegConfPwdField = driver.findElement(regConfPwdField);
 
-        WebElement RegSignUpButton = driver.findElement(regSignUpButton);
 
         WebDriverWait wait = new WebDriverWait(driver, 15);
         wait.until(ExpectedConditions.visibilityOf(fillRegNameField));
@@ -95,7 +98,6 @@ public class HomePage extends Base {
             fillRegConfPwdField.clear();
             fillRegConfPwdField.sendKeys(confirm_password);
         }
-//        RegSignUpButton.submit();
 
     }
 
@@ -122,8 +124,6 @@ public class HomePage extends Base {
         WebElement fillSignInUsernameField = driver.findElement(signInUsernameField);
         WebElement fillSignInEmailField = driver.findElement(signInEmailField);
 
-        WebElement logInBtnForm = driver.findElement(logInBtn);
-
         WebDriverWait wait = new WebDriverWait(driver, 15);
         wait.until(ExpectedConditions.visibilityOf(fillSignInUsernameField));
 
@@ -136,8 +136,6 @@ public class HomePage extends Base {
             fillSignInEmailField.clear();
             fillSignInEmailField.sendKeys(email);
         }
-
-//        logInBtnForm.submit();
 
     }
 
@@ -168,16 +166,8 @@ public class HomePage extends Base {
     public void itemAddedToCart() {
         WebElement itemOnCart = driver.findElement(itemAddedToCart);
         itemOnCart.isDisplayed();
-//        WebElement quickViewBtn = driver.findElement(quickViewButton);
-        //quickViewBtn.isDisplayed();
-//        quickViewBtn.click();
     }
 
-    //    public void displayQuickViewBtn(){
-//        WebElement quickViewBtn = driver.findElement(quickViewButton);
-//        quickViewBtn.isDisplayed();
-//        //quickViewBtn.click();
-//    }
     public void clickQuickViewBtn() {
         WebElement quickViewBtn = driver.findElement(quickViewButton);
         quickViewBtn.isDisplayed();

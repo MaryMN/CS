@@ -5,5 +5,5 @@ Feature: Search
     Then Search for element "<element>"
     And Validate that product is returned
     Examples:
-      |element|
-      |shirt|
+      | element |
+      | shirt   |

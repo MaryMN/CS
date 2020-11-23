@@ -29,18 +29,14 @@ public class RegistrationSteps {
     @Test
     @When("SIGN UP Button is pressed")
     public void sign_up_button_is_pressed() throws Throwable {
-        //Assert.assertNotNull(homePage.clickOnSignUpBtn());
         homePage.clickOnSignUpBtn();
 
-        //throw new io.cucumber.java.PendingException();
     }
 
     @Test
     @Then("The registration form appears")
     public void the_registration_form_appears() throws Throwable {
         homePage.registrationForm();
-        // Write code here that turns the phrase above into concrete actions
-        //throw new io.cucumber.java.PendingException();
     }
 
     @Test
@@ -65,6 +61,9 @@ public class RegistrationSteps {
     @And("The page with successful registration appears")
     public void the_page_with_successful_registration_appears() throws Throwable {
         Assert.assertFalse(driver.findElement(By.xpath("//p[contains(text(), '404')]")).isDisplayed());
+
     }
+
+
 }
 
