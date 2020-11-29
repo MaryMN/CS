@@ -3,10 +3,12 @@ package stepDefinition;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import io.cucumber.junit.CucumberOptions;
 import org.junit.Test;
 import org.openqa.selenium.WebDriver;
 import poms.HomePage;
 
+@CucumberOptions(plugin = {"json:target/cucumber.json", "pretty", "html:target/cucumber-reports"})
 public class CartSteps {
     WebDriver driver;
     HomePage homePage;
